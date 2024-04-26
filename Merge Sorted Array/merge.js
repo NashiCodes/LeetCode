@@ -7,55 +7,30 @@
 //  */
 
 var merge = function () {
-  let nums1 = [1, 2, 3, 0, 0, 0, 0, 0, 0, 0];
-  let m = 3;
-  let nums2 = [2, 5, 6];
+  let m = 6;
   let n = 3;
+  let nums1 = [-1, 0, 0, 3, 3, 3, 0, 0, 0];
+  let nums2 = [1, 2, 2];
 
-  nums1.splice(m, nums1.length - m, ...nums2);
+  if (n === 0) return;
 
-  n += m;
-  mergeSort(nums1, 0, n - 1);
-
-  console.log(nums1);
-};
-
-var mergeSort = function (vet, l, r) {
-  if (l < r) {
-    let m = Math.floor((l + r) / 2);
-    mergeSort(vet, l, m);
-    mergeSort(vet, m + 1, r);
-    auxMerge(vet, l, m, r);
-  }
-};
-
-var auxMerge = function (vet, l, m, r) {
-  let i = l;
-  let j = m + 1;
-  let k = 0;
-
-  let vetAux = [];
-
-  while (i <= m && j <= r) {
-    if (vet[i] < vet[j]) {
-      vetAux[k++] = vet[i++];
+  
+  let lst = m + n - 1;
+  while (n > 0 && m > 0) {
+    if (nums1[m - 1] <= nums2[n - 1]) {
+      nums1[lst] = nums2[n - 1];
+      n--;
     } else {
-      vetAux[k++] = vet[j++];
+      nums1[lst] = nums1[m - 1];
+      m--;
     }
-  }
+    lst--;
+   }
+   
+   while (n > 0) {
+      nums1[lst--] = nums2[--n];
+   }
 
-  while (i <= m) {
-    vetAux[k++] = vet[i++];
-  }
-
-  while (j <= r) {
-    vetAux[k++] = vet[j++];
-  }
-
-  k = 0;
-  for (i = l; i <= r; i++, k++) {
-    vet[i] = vetAux[k];
-  }
 };
 
 merge();
