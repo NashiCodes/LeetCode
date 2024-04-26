@@ -1,0 +1,67 @@
+# Compiled files
+*.dll
+*.exe
+*.pdb
+
+# NuGet packages
+*.nupkg
+
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.vscode/
+*.sln
+*.suo
+*.userprefs
+*.csproj
+*.csproj.user
+*.sln.ide
+
+# Resharper files
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Unity files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+Assets/AssetStoreTools*
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Mac files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+.fseventsd
