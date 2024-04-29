@@ -24,4 +24,4 @@ function restoreIpAddresses(s: string): string[] {
   return result;
 }
 
-restoreIpAddresses("0000");
+restoreIpAddresses("25525511135");
